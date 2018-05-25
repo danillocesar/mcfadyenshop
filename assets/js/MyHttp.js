@@ -2,7 +2,7 @@
 var ajax = new XMLHttpRequest()
 
 var myHttp = {
-	url: "http://localhost:8080/",
+	url: "https://mcfadyenbackend.herokuapp.com/",
 	get: function(urlPath, params, callback){
 		var url = this.url + urlPath;
 		this.send(url, params, null, "GET", callback);
