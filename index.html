@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>McFadyen Store</title>
+<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- <link rel="import" href="assets/templates/card-product.html"> -->
+<script type='text/javascript' src='assets/lib/jquery.js'></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/MyHttp.js"></script>
+<script src="assets/js/views/product/product.view.js"></script>
+<script src="assets/js/views/shoppingcart/shoppingcart.js"></script>
+
+</head>
+<body layout="row" onload="ProductView.init()">
+	<div id="header">
+		<button type="button" onclick="ShoppingCart.show()">Shopping
+			Cart</button>
+	</div>
+	<div class="shoppingCart hidden" id="shoppingCart">
+		<div class="shoppingCart-content">
+			<span class="button-close" onclick="closeModal();"></span>
+			<h3>Shopping Cart</h3>
+			<table id="products-table">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Product</th>
+						<th>Price</th>
+						<th>Quantity</th>
+						<th>Total</th>
+						<th>Remove</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td id="total" colspan="6" style="text-align: right;"></td>
+					</tr>
+				</tfoot>
+			</table>
+			<div class="actions-buttons">
+				<button class="btn-primary" onclick="ShoppingCart.hide()">Close</button>
+			</div>
+		</div>
+	</div>
+	<div id="productList"></div>
+</body>
+</html>
